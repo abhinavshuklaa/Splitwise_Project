@@ -7,5 +7,6 @@
     <dimen name="dp_150">150dp</dimen>
     <dimen name="sp_28">28sp</dimen>
     <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_100">100dp</dimen>
 
 </resources>
