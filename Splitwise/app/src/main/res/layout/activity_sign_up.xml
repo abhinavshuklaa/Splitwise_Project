@@ -27,8 +27,24 @@
             />
     </LinearLayout>
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/etFullname"
         android:hint="@string/Fullname"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/mail"
+        android:hint="@string/emailhint"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:hint="@string/passwordhint"
+        android:id="@+id/pwd"
         android:textColor="@android:color/black"
         android:layout_marginRight="@dimen/dp_30"
         android:layout_marginLeft="@dimen/dp_30"
