@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Friends_Fragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewTotalBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileImageForEachPerson"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/tvSettledOrNot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_toEndOf="@id/ivProfileImageForEachPerson"
+                android:padding="12dp" />
+
+            <TextView
+                android:id="@+id/tvAmountToOwe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvSettledOrNot"
+                android:textColor="@color/orange_splitwise"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/ivProfileImageForEachPerson"
+                android:padding="12dp" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFriendsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cardViewTotalBalance"
+        android:layout_above="@+id/llBottomAdd"/>
+
+        <LinearLayout
+            android:id="@+id/llBottomAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/btnAddMOreFriends"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.80"
+                android:text="+ Add More Friends "
+                android:textSize="22sp"
+                android:padding="5dp"
+                android:textColor="@android:color/black"
+                android:backgroundTint="#EEEEEE"/>
+
+
+            <Button
+                android:id="@+id/btnCircleIconToAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.20"
+                android:padding="5dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/circle_to_add_friends"
+                android:text="+"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
