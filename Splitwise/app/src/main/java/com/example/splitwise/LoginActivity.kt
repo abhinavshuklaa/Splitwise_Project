@@ -16,8 +16,6 @@ import kotlinx.android.synthetic.main.activity_log_in_and_sign_up.btnlogin
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(),View.OnClickListener {
-    private lateinit var mail: String
-    private lateinit var pwd: String
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,58 +48,29 @@ class LoginActivity : AppCompatActivity(),View.OnClickListener {
    private fun sugnUp(){
         if(email.text.toString().isEmpty()){
             email.error="Please enter email"
-            email.requestFocus()
             return
         }
         if(!Patterns.EMAIL_ADDRESS.matcher(email.text.toString()).matches()){
             email.error="Please enter valid email"
-            email.requestFocus()
             return
         }
         if(password.text.toString().isEmpty()){
             password.error="Please enter Password"
-            password.requestFocus()
             return
+        } else {
+            logIn(email.text.toString(),password.text.toString())
         }
-       auth.createUserWithEmailAndPassword(email.text.toString(),password.text.toString()).
-       addOnCompleteListener(this){task ->
-           if(task.isSuccessful){
-               val intent = Intent(this@LoginActivity, Splitwise_HomeActivity::class.java)
-               startActivity(intent)
-               finish()
-           } else{
-               Toast.makeText(this@LoginActivity,"Login Failed",Toast.LENGTH_SHORT).show()
-               updateUI(null)
-           }
-
-       }
-    }
-
-
-
-
-    public override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser :FirebaseUser?= auth.currentUser
-            updateUI(currentUser)
 
     }
-
-    private fun updateUI(currentUser: FirebaseUser?) {
-
-
-    }
-
-
-    fun existingUser(mail: String, pwd: String) {
-        auth.signInWithEmailAndPassword(mail, pwd)
+    private fun logIn(email:String,password:String) {
+        auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
+                    intent=Intent(this@LoginActivity,Splitwise_HomeActivity::class.java)
+                    startActivity(intent)
                     Log.d("Lakshmi", "signInWithEmail:success")
                     val user = auth.currentUser
-                    updateUI(user)
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w("Lakshmi", "signInWithEmail:failure", task.exception)
@@ -113,18 +82,11 @@ class LoginActivity : AppCompatActivity(),View.OnClickListener {
                     // ...
                 }
 
-                // ...
+
             }
     }
 
-    fun firebaseUser() {
-        val user = Firebase.auth.currentUser
-        user?.let {
-            val name = user.displayName
-            val email = user.email
-            val photoUrl = user.photoUrl
-            val emailVerified = user.isEmailVerified
-            val uid = user.uid
-        }
-    }
+
+
+
 }
