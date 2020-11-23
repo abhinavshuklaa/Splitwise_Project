@@ -94,7 +94,7 @@ class SignUpActivity : AppCompatActivity(),View.OnClickListener {
                     databaseReference.setValue(hashmap).addOnCompleteListener(this){task ->
 
                         if(task.isSuccessful){
-                            val intent= Intent(this@SignUpActivity,Splitwise_HomeActivity::class.java)
+                            val intent= Intent(this@SignUpActivity,LoginActivity::class.java)
                             startActivity(intent)
                         } else{
                             Toast.makeText(
