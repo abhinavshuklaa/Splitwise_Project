@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Splitwise</string>
+    <string name="login">log in</string>
+    <string name="signup">sign up</string>
+    <string name="splitwise">Splitwise</string>
+    <string name="emailhint">Your email address</string>
+    <string name="passwordhint">Your password</string>
+    <string name="save">Save</string>
+    <string name="Back">Back</string>
+    <string name="Fullname">Full Name</string>
+    <string name="Forgot_password">Forgot your password?</string>
+    <string name="byusing_signup">By signing up, you accept the Splitwise Terms of Service</string>
 </resources>
