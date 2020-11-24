@@ -18,13 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Splitwise_HomeActivity" />
         <activity android:name=".MainActivity"/>
         <activity android:name=".TermaOfService"></activity>
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".LogInAndSignUpActivity">
+        <activity android:name=".LogInAndSignUpActivity"/>
         <activity android:name=".Choose_Contact_Activity"></activity>
         <activity android:name=".AddIconActivity" />
         <activity android:name=".Splitwise_HomeActivity">
@@ -34,7 +33,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
