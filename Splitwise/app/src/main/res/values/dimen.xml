@@ -50,6 +50,9 @@
     <dimen name="dp_240">240dp</dimen>
     <dimen name="dp_245">245dp</dimen>
     <dimen name="dp_250">250dp</dimen>
+    <dimen name="dp_300">300dp</dimen>
+    <dimen name="sp_28">28sp</dimen>
+
 
     <dimen name="sp_5">5sp</dimen>
     <dimen name="sp_10">10sp</dimen>
