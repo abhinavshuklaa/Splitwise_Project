@@ -80,9 +80,7 @@ class LoginActivity : AppCompatActivity(),View.OnClickListener {
                     ).show()
                     // updateUI(null)
                     // ...
-                }
-
-
+                    }
             }
     }
 
