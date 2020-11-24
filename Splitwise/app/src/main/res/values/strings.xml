@@ -9,4 +9,6 @@
     <string name="Pay">Pay your friends back any time</string>
     <string name="getStarted">Let\'s get started</string>
     <string name="begin">Tap here to begin</string>
+    <string name="privacy">Privacy Policy :: Splitwise</string>
+    <string name="Terms">Terms of Service :: Splitwise</string>
 </resources>
