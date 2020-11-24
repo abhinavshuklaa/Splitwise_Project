@@ -29,7 +29,6 @@
             android:text="@string/login"
             />
         <Button
-            style=""
             android:id="@+id/btnsignup"
             android:layout_marginTop="8dp"
             android:layout_marginLeft="30dp"
@@ -40,9 +39,9 @@
             />
         <com.google.android.gms.common.SignInButton
             android:id="@+id/btnsignwithgoogle"
-            android:layout_marginTop="@dimen/dp_8"
-            android:layout_marginRight="@dimen/dp_30"
-            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_70"
+            android:layout_marginLeft="@dimen/dp_70"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
