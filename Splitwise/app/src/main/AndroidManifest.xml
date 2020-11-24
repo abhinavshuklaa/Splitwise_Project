@@ -19,13 +19,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".Splitwise_HomeActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"/>
         <activity android:name=".TermaOfService"></activity>
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Splitwise_HomeActivity" />
         <activity android:name=".LogInAndSignUpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
