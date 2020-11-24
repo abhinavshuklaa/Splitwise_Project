@@ -7,8 +7,7 @@ import kotlinx.android.synthetic.main.activity_splitwise__home.*
 
 
 class Splitwise_HomeActivity : AppCompatActivity() {
-private lateinit var fregmentAdapter_Splitwise_HomeActivity: FragmentAdapter_Splitwise_HomeActivity
-
+    private lateinit var fregmentAdapter_Splitwise_HomeActivity: FragmentAdapter_Splitwise_HomeActivity
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +20,7 @@ private lateinit var fregmentAdapter_Splitwise_HomeActivity: FragmentAdapter_Spl
     }
 
     private fun InitializingAndsettingViewPager() {
-        viewPagerFragmentFriends.adapter=fregmentAdapter_Splitwise_HomeActivity
+        viewPagerFragmentFriends.adapter = fregmentAdapter_Splitwise_HomeActivity
         tabLayoutFragmentFriends.setupWithViewPager(viewPagerFragmentFriends)
 
 

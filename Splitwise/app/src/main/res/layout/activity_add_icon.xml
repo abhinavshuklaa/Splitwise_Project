@@ -61,13 +61,20 @@
             android:layout_centerVertical="true"
             android:text="@string/with_you" />
 
-        <TextView
+
+        <Spinner
             android:id="@+id/tvSecondPerson"
             android:layout_width="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_toRightOf="@+id/tvWithYou" />
+            android:layout_toRightOf="@+id/tvWithYou"
+            android:layout_margin="10dp"/>
+
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_toRightOf="@+id/tvWithYou" />-->
 
 
     </RelativeLayout>
@@ -193,6 +200,7 @@
                     android:src="@drawable/ic_calendar" />
 
                 <TextView
+                    android:id="@+id/tvToday_Date"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -201,6 +209,7 @@
 
 
                 <ImageView
+                    android:id="@+id/userGroupIcon"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -208,6 +217,7 @@
                     android:src="@drawable/ic_group" />
 
                 <TextView
+                    android:id="@+id/tvGroupName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -216,6 +226,7 @@
 
 
                 <ImageView
+                    android:id="@+id/CameraIcon"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -223,6 +234,7 @@
                     android:src="@drawable/ic_camera" />
 
                 <ImageView
+                    android:id="@+id/notesIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
