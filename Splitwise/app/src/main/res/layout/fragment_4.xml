@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/splitwiseBg"
+    android:background="@color/background_green"
     tools:context=".Fragment_4">
 
     <TextView
@@ -25,7 +25,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/sp_20"
+        android:textSize="@dimen/sp_15"
         android:id="@+id/btn_launch"
         android:layout_below="@id/tv_getStarted"
         android:layout_centerHorizontal="true"
