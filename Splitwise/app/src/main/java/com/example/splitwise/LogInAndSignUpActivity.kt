@@ -89,7 +89,7 @@ class LogInAndSignUpActivity : AppCompatActivity(),View.OnClickListener {
                     // If sign in fails, display a message to the user.
                     // ...
                     println("Failure")
-                    Snackbar.make(rlParent, "Authentication Failed.", Snackbar.LENGTH_SHORT).show()
+                    Snackbar.make(rlParent, "Login Failed.", Snackbar.LENGTH_SHORT).show()
                 }
 
             }
