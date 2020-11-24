@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Friends_Fragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewTotalBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileImageForEachPerson"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/abhinav" />
+
+            <TextView
+                android:id="@+id/tvSettledOrNot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/ivProfileImageForEachPerson"
+                android:padding="12dp"
+                android:text="TOTAL BALANCE"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvAmountToOwe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvSettledOrNot"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/ivProfileImageForEachPerson"
+                android:padding="12dp"
+                android:text="you owe ₹ 2,000.00"
+                android:textColor="@color/orange_splitwise" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFriendsFragment"
+        android:layout_width="match_parent"
+        android:layout_margin="4dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottomAdd"
+        android:layout_below="@+id/cardViewTotalBalance" />
+
+    <LinearLayout
+        android:id="@+id/llBottomAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btnAddMOreFriends"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#EEEEEE"
+            android:padding="5dp"
+            android:text="+ Add More Friends "
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnCircleIconToAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginStart="4dp"
+            android:outlineAmbientShadowColor="@color/white"
+            android:src="@drawable/ic_plus"
+            app:backgroundTint="@color/orange_splitwise" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

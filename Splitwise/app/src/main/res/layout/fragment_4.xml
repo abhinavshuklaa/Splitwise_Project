@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splitwiseBg"
+    tools:context=".Fragment_4">
+
+    <TextView
+        android:id="@+id/tv_getStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginTop="450dp"
+        android:textStyle="bold"
+        android:text="@string/getStarted"
+        android:layout_marginEnd="@dimen/dp_50"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_30" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_20"
+        android:id="@+id/btn_launch"
+        android:layout_below="@id/tv_getStarted"
+        android:layout_centerHorizontal="true"
+        android:text="@string/begin"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_50"
+        android:textAlignment="center"
+        android:textColor="@android:color/white" />
+
+
+
+
+</RelativeLayout>
