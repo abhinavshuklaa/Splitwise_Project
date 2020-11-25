@@ -19,13 +19,12 @@
         android:layout_marginBottom="@dimen/dp_20"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/sp_30" />
+        android:textSize="@dimen/sp_20" />
 
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/sp_15"
         android:id="@+id/btn_launch"
         android:layout_below="@id/tv_getStarted"
         android:layout_centerHorizontal="true"
