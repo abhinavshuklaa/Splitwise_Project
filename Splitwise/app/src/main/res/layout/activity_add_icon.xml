@@ -8,10 +8,14 @@
     tools:context=".AddIconActivity">
 
 
+
+<!--<com.google.android.material.appbar.AppBarLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height=""-->
     <RelativeLayout
         android:id="@+id/rlToolbarAddExpense"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="?android:attr/actionBarSize"
         android:background="@color/background_green">
 
 

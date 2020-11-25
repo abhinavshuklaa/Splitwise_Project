@@ -6,21 +6,12 @@ import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
 import android.view.View
-import android.widget.EditText
 import android.widget.Toast
-import androidx.annotation.NonNull
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
-import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_login.btnSave
 import kotlinx.android.synthetic.main.activity_login.btnback
 import kotlinx.android.synthetic.main.activity_sign_up.*
-import java.lang.ref.PhantomReference
 
 class SignUpActivity : AppCompatActivity(),View.OnClickListener {
     private lateinit var firebaseAuth:FirebaseAuth
@@ -32,7 +23,7 @@ class SignUpActivity : AppCompatActivity(),View.OnClickListener {
         initbuttons()
     }
     fun initbuttons(){
-        btnSave.setOnClickListener(this)
+        btnSaveSignUpActivity.setOnClickListener(this)
         btnback.setOnClickListener(this)
         byusingsignup.setOnClickListener(this)
         firebaseAuth= FirebaseAuth.getInstance()
@@ -43,8 +34,8 @@ class SignUpActivity : AppCompatActivity(),View.OnClickListener {
                 val intent= Intent(this@SignUpActivity,LogInAndSignUpActivity::class.java)
                 startActivity(intent)
             }
-            R.id.btnSave ->{
-                sugnUp()
+            R.id.btnSaveSignUpActivity ->{
+                signUp()
             }
             R.id.btnsignup ->{
                 val intent= Intent(this@SignUpActivity,TermaOfService::class.java)
@@ -53,7 +44,7 @@ class SignUpActivity : AppCompatActivity(),View.OnClickListener {
 
         }
     }
-    private fun sugnUp() {
+    private fun signUp() {
         if (mail.text.toString().isEmpty()) {
             mail.error = "Please enter email"
             mail.requestFocus()
@@ -91,6 +82,8 @@ class SignUpActivity : AppCompatActivity(),View.OnClickListener {
                     hashmap.put("mpwd",mpwd)
                     hashmap.put("musername",musername)
                     hashmap.put("imageurl","default")
+
+
                     databaseReference.setValue(hashmap).addOnCompleteListener(this){task ->
 
                         if(task.isSuccessful){
