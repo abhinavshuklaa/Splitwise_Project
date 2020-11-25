@@ -47,4 +47,47 @@
 
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Terms"
+            android:id="@+id/tv_terms"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_terms"
+            android:text=" | "
+            android:id="@+id/line1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/privacy"
+            android:layout_toRightOf="@id/line1"
+            android:id="@+id/tv_privacy"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_privacy"
+            android:text=" | "
+            android:id="@+id/line2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_contactUs"
+            android:layout_toRightOf="@id/line2"
+            android:text="@string/Contactus"
+            android:layout_marginBottom="@dimen/dp_5"/>
+
+    </RelativeLayout>
+
 </RelativeLayout>

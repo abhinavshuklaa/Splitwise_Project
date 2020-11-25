@@ -6,6 +6,12 @@
     android:background="@color/background_green"
     tools:context=".Fragment_2">
 
+    <ImageView
+        android:layout_width="@dimen/dp_350"
+        android:layout_height="@dimen/dp_300"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/bill"
+        android:layout_margin="@dimen/dp_20"/>
     <TextView
         android:id="@+id/tv_add_expense"
         android:layout_width="wrap_content"

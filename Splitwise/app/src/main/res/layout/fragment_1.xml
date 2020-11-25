@@ -11,8 +11,8 @@
         android:layout_width="@dimen/dp_200"
         android:layout_height="@dimen/dp_200"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/dp_100"
-        android:layout_marginBottom="@dimen/dp_150"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_marginBottom="@dimen/dp_100"
         android:src="@drawable/ic_home_logo" />
 
     <TextView
@@ -21,24 +21,26 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="@dimen/dp_50"
-        android:layout_marginTop="450dp"
         android:textStyle="bold"
+        android:layout_above="@id/tv_fin"
         android:layout_marginEnd="@dimen/dp_50"
         android:layout_marginBottom="@dimen/dp_20"
         android:text="@string/hello"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/sp_30" />
+        android:textSize="@dimen/sp_20" />
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/sp_20"
-        android:layout_below="@id/tv_hello"
+        android:id="@+id/tv_fin"
         android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="@dimen/dp_50"
         android:layout_marginEnd="@dimen/dp_50"
+        android:layout_marginBottom="@dimen/dp_50"
         android:text="@string/vp1"
         android:textAlignment="center"
         android:textColor="@android:color/white" />

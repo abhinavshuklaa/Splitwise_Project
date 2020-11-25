@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Splitwise">
+        <activity android:name=".LogInAndSignUpActivity"></activity>
         <activity android:name=".ViewPagerIntroActivity"></activity>
+        <activity android:name=".PrivacyPolicyActivity"></activity>
         <activity android:name=".TermsActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>

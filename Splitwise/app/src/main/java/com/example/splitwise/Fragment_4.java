@@ -49,10 +49,9 @@ public class Fragment_4 extends Fragment {
         btn_launch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), LogInAndSignUpActivity.class);
                 Intent intent = new Intent(getActivity(), TermsActivity.class);
                 startActivity(intent);
-                getActivity().finish();
+                //getActivity().finish();
             }
         });
     }
