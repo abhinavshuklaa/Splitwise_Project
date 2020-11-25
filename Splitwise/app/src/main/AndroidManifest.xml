@@ -16,14 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Splitwise">
         <activity android:name=".Contact_Activity_Dummy">
+
+        </activity>
+        <activity android:name=".ContactsListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".ContactsListActivity">
-
         </activity>
         <activity android:name=".Splitwise_HomeActivity" />
         <activity android:name=".MainActivity" />

@@ -1,6 +1,7 @@
 package com.example.splitwise;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -18,15 +19,25 @@ import java.util.List;
 
 public class Contact_Activity_Dummy extends AppCompatActivity {
 
+    private FragmentManager fragmentManager = getSupportFragmentManager();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact___dummy);
+        launchFragment();
+        fp_get_Android_Contacts();
     }
+
+    private void launchFragment() {
+        ContactsFragment contactsFragment=new ContactsFragment();
+        fragmentManager.beginTransaction().replace(R.id.flContainer,contactsFragment,"fragment").addToBackStack("fragment").commit();
+    }
+
     public class Android_Contact {
         public String android_contact_Name = "";
         public String android_contact_TelefonNr = "";
-        public int android_contact_ID=0;
+        public int android_contact_ID = 0;
     }
 
     public void fp_get_Android_Contacts() {
@@ -78,6 +89,7 @@ public class Contact_Activity_Dummy extends AppCompatActivity {
 
     }
 
+
     public class Adapter_for_Android_Contacts extends BaseAdapter {
 
         Context mContext;
@@ -106,9 +118,9 @@ public class Contact_Activity_Dummy extends AppCompatActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            View view=View.inflate(mContext,R.layout.item_layout_contact_list,null);
-            TextView textview_contact_Name= (TextView) view.findViewById(R.id.textview_android_contact_name);
-            TextView textview_contact_TelefonNr= (TextView) view.findViewById(R.id.textview_android_contact_phoneNr);
+            View view = View.inflate(mContext, R.layout.item_layout_contact_list, null);
+            TextView textview_contact_Name = (TextView) view.findViewById(R.id.textview_android_contact_name);
+            TextView textview_contact_TelefonNr = (TextView) view.findViewById(R.id.textview_android_contact_phoneNr);
 
             textview_contact_Name.setText(mList_Android_Contacts.get(position).android_contact_Name);
             textview_contact_TelefonNr.setText(mList_Android_Contacts.get(position).android_contact_TelefonNr);

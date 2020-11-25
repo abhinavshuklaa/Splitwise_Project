@@ -17,9 +17,9 @@ class Friends_Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        btnCircleIconToAdd
-        btnCircleIconToAdd.rippleColor=Color.parseColor("#ff407a")
+//        // Inflate the layout for this fragment
+//        btnCircleIconToAdd
+//        btnCircleIconToAdd.rippleColor=Color.parseColor("#ff407a")
         return inflater.inflate(R.layout.fragment_friends_, container, false)
     }
 
