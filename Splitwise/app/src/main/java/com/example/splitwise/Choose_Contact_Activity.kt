@@ -8,11 +8,11 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_choose__contact_.*
 
 class Choose_Contact_Activity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
-//    val firebaseReference = FirebaseDatabase.getInstance().getReference("Users").child("MMy9IJz_W5CpQyEcHo7")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose__contact_)
@@ -25,22 +25,31 @@ class Choose_Contact_Activity : AppCompatActivity() {
 
     private fun addfriend(contact:String) {
 
-//        val id :String?= firebaseAuth.currentUser?.uid
+       val userId = firebaseAuth.currentUser?.uid
+        val  firebaseReference = FirebaseDatabase.getInstance().getReference("Users")
+        firebaseReference.addValueEventListener(object :ValueEventListener{
+            override fun onCancelled(error: DatabaseError) {
 
-//        firebaseReference.addValueEventListener(object :ValueEventListener{
-//            override fun onCancelled(error: DatabaseError) {
-//
-//            }
-//
-//            override fun onDataChange(snapshot: DataSnapshot) {
-//                for (i in snapshot.children){
-//                   var  database  = i.getValue(Database::class.java)!!
-//                    putnewData(database,contact)
-//                }
-//
-//            }
+            }
 
-//        })
+            override fun onDataChange(snapshot: DataSnapshot) {
+                for (i in snapshot.children){
+                    var database = i.getValue(Database::class.java)
+                    if (database?.userId==userId){
+                        val friendsList = database?.friendList
+
+                        val friend = Friends(contact)
+                        friendsList?.add(friend)
+                        val new_database = Database(userId!!,database.email,database.phoneNo,database.name,database.imageUrl,friendsList!!)
+                        firebaseReference.child(userId)
+
+                    }
+                }
+            }
+
+        })
+
+
 
         val reference = FirebaseDatabase.getInstance().getReference("Users").child("-MMyljHN52aYwehc4z-L")
         reference.addValueEventListener(object :ValueEventListener{
@@ -54,7 +63,7 @@ class Choose_Contact_Activity : AppCompatActivity() {
 
         })
 
-        reference.setValue()
+//        reference.setValue()
 
 
 

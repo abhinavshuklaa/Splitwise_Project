@@ -95,7 +95,7 @@ class SignUpActivity : AppCompatActivity(),View.OnClickListener {
                     val user = firebaseAuth.currentUser
                     val userId: String = user!!.uid
                     databaseReference =
-                        FirebaseDatabase.getInstance().getReference("Users")
+                        FirebaseDatabase.getInstance().getReference("Users").child(userId)
                      var friendsList = emptyList<Friends>()
                     val data = Database(
                         userId,
@@ -108,7 +108,7 @@ class SignUpActivity : AppCompatActivity(),View.OnClickListener {
 ////                    val key: String =databaseReference.key.toString()
         try {
 
-            databaseReference.push().setValue(data)
+            databaseReference.setValue(data)
                 .addOnCompleteListener(this) { task ->
 
                     if (task.isSuccessful) {
