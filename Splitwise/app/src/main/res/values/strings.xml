@@ -15,8 +15,15 @@
     <string name="emailhint">Your email address</string>
     <string name="passwordhint">Your password</string>
     <string name="save">Save</string>
+    <string name="home">Home</string>
+    <string name="settings">Settings</string>
+    <string name="scancode">Scan code</string>
+    <string name="Ratesplitwise">Rate Splitwise</string>
+    <string name="Contactus">Contact us</string>
+    <string name="Logout">Log out</string>
     <string name="Back">Back</string>
     <string name="Fullname">Full Name</string>
+    <string name="emailaddress">Enter Email Address</string>
     <string name="Forgot_password">Forgot your password?</string>
     <string name="byusing_signup">By signing up, you accept the Splitwise Terms of Service</string>
     <string name="already_have_an_account">Already have an account? <font color='#01C6DB'>Login</font></string>
