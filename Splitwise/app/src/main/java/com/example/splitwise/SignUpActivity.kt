@@ -96,13 +96,13 @@ class SignUpActivity : AppCompatActivity(),View.OnClickListener {
                     val userId: String = user!!.uid
                     databaseReference =
                         FirebaseDatabase.getInstance().getReference("Users")
-
+                     var friendsList = emptyList<Friends>()
                     val data = Database(
                         userId,
                         email = mmail,
                         phoneNo = phoneNo,
-                        name = musername,
-                        imageUrl = "default"
+                        name = musername
+
                     )
 //                    databaseReference = FirebaseDatabase.getInstance().getReference("Users")
 ////                    val key: String =databaseReference.key.toString()

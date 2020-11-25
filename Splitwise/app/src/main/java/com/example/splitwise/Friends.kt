@@ -1,6 +1,6 @@
 package com.example.splitwise
 
-data class Friends(
-    val name:String,val userUID:String,val phoneNUmber:String){
-    constructor():this("","","")
+data class Friends(var friendId:String ,var transactionList: MutableList<Transactions> ){
+    constructor():this(" ", mutableListOf<Transactions>())
+
 }
