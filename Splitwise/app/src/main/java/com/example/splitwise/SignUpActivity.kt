@@ -96,7 +96,7 @@ class SignUpActivity : AppCompatActivity(),View.OnClickListener {
                     val userId: String = user!!.uid
                     databaseReference =
                         FirebaseDatabase.getInstance().getReference("Users").child(userId)
-                     var friendsList = emptyList<Friends>()
+//                     var friendsList = emptyList<Friends>()
                     val data = Database(
                         userId,
                         email = mmail,

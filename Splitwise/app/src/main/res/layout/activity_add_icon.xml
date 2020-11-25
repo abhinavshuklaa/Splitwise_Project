@@ -41,6 +41,7 @@
 
 
         <TextView
+            android:id="@+id/tvSaveToTransactionDatabase"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -61,17 +62,54 @@
             android:id="@+id/tvWithYou"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
             android:layout_centerVertical="true"
             android:text="@string/with_you" />
 
 
-        <Spinner
-            android:id="@+id/tvSecondPerson"
+        <TextView
+            android:id="@+id/tvSecondPersonSpinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/tvWithYou"
-            android:layout_margin="10dp"/>
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/dropDownIconToGenerateSecondPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_drop_down"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/tvSecondPersonSpinner"/>
+
+        <LinearLayout
+            android:id="@+id/llEditLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:background="@drawable/edittext_bg"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerViewDropDownIcon"/>
+
+
+
+
+        </LinearLayout>
+
+<!--        <Spinner-->
+<!--            android:id="@+id/tvSecondPersonSpinner"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_toRightOf="@+id/tvWithYou"-->
+<!--            android:layout_margin="10dp"/>-->
 
 
 <!--        <TextView-->
@@ -107,6 +145,7 @@
                 android:src="@drawable/ic_description" />
 
             <EditText
+                android:id="@+id/etDescriptionOfTransaction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter a description"
@@ -130,6 +169,7 @@
                 android:src="@drawable/ic_rupee" />
 
             <EditText
+                android:id="@+id/etAmountOfTransaction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="0.00"

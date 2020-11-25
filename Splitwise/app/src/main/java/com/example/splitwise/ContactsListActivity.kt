@@ -3,6 +3,7 @@ package com.example.splitwise
 import android.database.Cursor
 import android.os.Bundle
 import android.provider.ContactsContract
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.SimpleCursorAdapter
@@ -63,12 +64,26 @@ class ContactsListActivity : AppCompatActivity() {
             ContactsContract.CommonDataKinds.Phone._ID
         )
 
+        for(i in from){
+            Log.d("abhinav",i)
+        }
+
+
         var to = intArrayOf(android.R.id.text1, android.R.id.text2)
+
+//        for(i in to.toString()){
+            Log.d("abhi",to.toString())
+//        }
 
         var simple =
             SimpleCursorAdapter(this, android.R.layout.simple_list_item_2, cursor, from, to)
 
-        listView.adapter=simple
+//        listView.adapter=simple
+
+
+
+
+
 //        val onItemClickListener=object :AdapterView.OnItemClickListener{
 //            override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
 //                val cursor :Cursor= parent.getItemAtPosition(p2)
@@ -103,10 +118,10 @@ class ContactsListActivity : AppCompatActivity() {
 
     }
 
-
-    private fun setAdapter(dataList: List<Database>) {
-
-    }
+//
+//    private fun setAdapter(dataList: List<Database>) {
+//
+//    }
 
 
 }
