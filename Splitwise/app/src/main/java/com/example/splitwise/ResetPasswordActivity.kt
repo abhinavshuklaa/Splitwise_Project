@@ -1,5 +1,6 @@
 package com.example.splitwise
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -31,6 +32,10 @@ class ResetPasswordActivity : AppCompatActivity(),View.OnClickListener {
         when (v?.id) {
             R.id.btnreset -> {
                 resetpassword(etEmailAddress.text.toString());
+            }
+            R.id.btnback ->{
+                val intent= Intent(this@ResetPasswordActivity,LogInAndSignUpActivity::class.java)
+                startActivity(intent)
             }
         }
     }
