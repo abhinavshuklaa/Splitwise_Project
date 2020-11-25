@@ -47,7 +47,7 @@ class SignUpActivity : AppCompatActivity(),View.OnClickListener {
                 sugnUp()
             }
             R.id.btnsignup ->{
-                val intent= Intent(this@SignUpActivity,TermaOfService::class.java)
+                val intent= Intent(this@SignUpActivity,SignUpActivity::class.java)
                 startActivity(intent)
             }
 

@@ -63,7 +63,7 @@ class LogInAndSignUpActivity : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(this@LogInAndSignUpActivity, TermsActivity::class.java)
                 startActivity(intent)
             }
-            R.id.tv_privacy -> {
+            R.id.tv_contactUs -> {
                 val intent = Intent(Intent.ACTION_SEND)
                 intent.setType("text/html")
                 intent.putExtra(Intent.EXTRA_EMAIL, "mukesh@gmail.com")

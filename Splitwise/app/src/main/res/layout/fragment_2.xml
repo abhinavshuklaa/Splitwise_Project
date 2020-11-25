@@ -7,37 +7,40 @@
     tools:context=".Fragment_2">
 
     <ImageView
-        android:layout_width="@dimen/dp_350"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/dp_300"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/bill"
-        android:layout_margin="@dimen/dp_20"/>
+        android:layout_margin="@dimen/dp_20"
+        android:src="@drawable/bill" />
+
     <TextView
         android:id="@+id/tv_add_expense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="@dimen/dp_50"
-        android:layout_marginTop="450dp"
-        android:textStyle="bold"
-        android:text="@string/addexp"
-        android:layout_marginEnd="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_75"
+        android:layout_marginEnd="@dimen/dp_75"
+        android:layout_above="@id/tv_billsum"
         android:layout_marginBottom="@dimen/dp_20"
+        android:text="@string/addexp"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/sp_30" />
+        android:textSize="@dimen/sp_30"
+        android:textStyle="bold" />
 
 
     <TextView
+        android:id="@+id/tv_billsum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/sp_20"
-        android:layout_below="@id/tv_add_expense"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/dp_75"
+        android:layout_marginEnd="@dimen/dp_75"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_100"
         android:text="@string/splitexp"
-        android:layout_marginStart="@dimen/dp_50"
-        android:layout_marginEnd="@dimen/dp_50"
         android:textAlignment="center"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_20" />
 
 </RelativeLayout>
