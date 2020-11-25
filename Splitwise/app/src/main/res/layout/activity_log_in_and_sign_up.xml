@@ -7,6 +7,7 @@
     tools:context=".LogInAndSignUpActivity"
     android:orientation="vertical">
     <LinearLayout
+        android:id="@+id/rlParent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -28,7 +29,6 @@
             android:text="@string/login"
             />
         <Button
-            style=""
             android:id="@+id/btnsignup"
             android:layout_marginTop="8dp"
             android:layout_marginLeft="30dp"
@@ -37,6 +37,13 @@
             android:layout_height="match_parent"
             android:text="@string/signup"
             />
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/btnsignwithgoogle"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_70"
+            android:layout_marginLeft="@dimen/dp_70"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
