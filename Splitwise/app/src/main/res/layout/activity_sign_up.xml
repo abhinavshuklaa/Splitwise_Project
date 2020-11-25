@@ -43,6 +43,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <EditText
+        android:id="@+id/etPhoneNo"
+        android:hint="@string/your_phone_number"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
         android:hint="@string/passwordhint"
         android:id="@+id/pwd"
         android:textColor="@android:color/black"
@@ -66,7 +74,7 @@
             />
         <Button
             android:layout_marginRight="@dimen/dp_30"
-            android:id="@+id/btnSaveSignUpActivity"
+            android:id="@+id/btnSaveUser"
             android:text="@string/save"
             android:layout_weight="1"
             android:layout_width="wrap_content"

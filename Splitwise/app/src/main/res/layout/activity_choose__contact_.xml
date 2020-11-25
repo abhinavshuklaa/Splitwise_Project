@@ -8,5 +8,16 @@
     tools:context=".Choose_Contact_Activity">
 
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etEnteredPhoneNo"
+        android:hint="enter phone number"
 
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAddThisFriend"
+        android:text="add friend"/>
 </LinearLayout>
