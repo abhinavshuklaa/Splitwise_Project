@@ -6,35 +6,42 @@
     android:background="@color/background_green"
     tools:context=".Fragment_4">
 
+    <ImageView
+        android:layout_width="@dimen/dp_350"
+        android:layout_height="@dimen/dp_300"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/dp_20"
+        android:src="@drawable/doll" />
+
     <TextView
         android:id="@+id/tv_getStarted"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_75"
+        android:layout_marginEnd="@dimen/dp_75"
         android:layout_marginTop="450dp"
-        android:textStyle="bold"
-        android:text="@string/getStarted"
-        android:layout_marginEnd="@dimen/dp_50"
         android:layout_marginBottom="@dimen/dp_20"
+        android:text="@string/getStarted"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/sp_20" />
+        android:textSize="@dimen/sp_20"
+        android:textStyle="bold" />
 
 
     <Button
+        android:id="@+id/btn_launch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_launch"
         android:layout_below="@id/tv_getStarted"
         android:layout_centerHorizontal="true"
-        android:text="@string/begin"
         android:layout_marginStart="@dimen/dp_50"
         android:layout_marginEnd="@dimen/dp_50"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:text="@string/begin"
         android:textAlignment="center"
-        android:textColor="@android:color/white" />
-
-
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sp_15" />
 
 
 </RelativeLayout>

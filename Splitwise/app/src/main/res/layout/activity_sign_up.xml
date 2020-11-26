@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"/>
     <EditText
         android:id="@+id/etPhoneNo"
-        android:hint="@string/your_phone_number"
+        android:hint="your_phone_number"
         android:textColor="@android:color/black"
         android:layout_marginRight="@dimen/dp_30"
         android:layout_marginLeft="@dimen/dp_30"

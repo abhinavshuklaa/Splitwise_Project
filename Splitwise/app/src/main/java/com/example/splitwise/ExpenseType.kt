@@ -1,4 +1,4 @@
 package com.example.splitwise
 
-val paid =1;
-val shared =2;
+val paid =1
+val shared =2

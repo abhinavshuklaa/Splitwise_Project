@@ -40,7 +40,7 @@ class Choose_Contact_Activity : AppCompatActivity() {
 
                         val friend = Friends(contact)
                         friendsList?.add(friend)
-                        val new_database = Database(userId!!,database.email,database.phoneNo,database.name,database.imageUrl,friendsList!!)
+                        val new_database = Database(userId!!,database?.email!!,database.phoneNo,database.name,database.imageUrl,friendsList!!)
                         firebaseReference.child(userId)
 
                     }

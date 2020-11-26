@@ -52,6 +52,8 @@
     <dimen name="dp_245">245dp</dimen>
     <dimen name="dp_250">250dp</dimen>
     <dimen name="dp_300">300dp</dimen>
+    <dimen name="dp_350">300dp</dimen>
+
     <dimen name="sp_28">28sp</dimen>
     <dimen name="dp_32">32dp</dimen>
 

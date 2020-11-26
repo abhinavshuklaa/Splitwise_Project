@@ -23,7 +23,7 @@ import kotlinx.android.synthetic.main.activity_sign_up.*
 import java.lang.ref.PhantomReference
 
 class SignUpActivity : AppCompatActivity(),View.OnClickListener {
-    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var firebaseAuth:FirebaseAuth
     private lateinit var databaseReference: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,8 +48,8 @@ class SignUpActivity : AppCompatActivity(),View.OnClickListener {
             R.id.btnSaveUser -> {
                 sugnUp()
             }
-            R.id.btnsignup -> {
-                val intent = Intent(this@SignUpActivity, TermaOfService::class.java)
+            R.id.btnsignup ->{
+                val intent= Intent(this@SignUpActivity,SignUpActivity::class.java)
                 startActivity(intent)
             }
 

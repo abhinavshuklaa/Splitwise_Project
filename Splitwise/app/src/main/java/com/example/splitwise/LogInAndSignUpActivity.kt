@@ -1,11 +1,17 @@
 package com.example.splitwise
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
@@ -17,41 +23,72 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_log_in_and_sign_up.*
 
-class LogInAndSignUpActivity : AppCompatActivity(),View.OnClickListener {
+class LogInAndSignUpActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var googleSignInOptions: GoogleSignInOptions
     private lateinit var googleSignInClient: GoogleSignInClient
     private val SIGNIN_REQ_CODE = 101
+    private val DEVICEMODEL = Build.MODEL
+    private val MANUFACTURER = Build.MANUFACTURER
+    private val OS = Build.VERSION.SDK_INT
     private lateinit var auth: FirebaseAuth
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in_and_sign_up)
         initbuttons()
         initData()
+
     }
-    fun initbuttons(){
+
+    fun initbuttons() {
         btnlogin.setOnClickListener(this)
         btnsignup.setOnClickListener(this)
         btnsignwithgoogle.setOnClickListener(this)
+        tv_terms.setOnClickListener(this)
+        tv_privacy.setOnClickListener(this)
+        tv_contactUs.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
-        when(v?.id){
-          R.id.btnlogin ->{
-             val intent=Intent(this@LogInAndSignUpActivity,LoginActivity::class.java)
-              startActivity(intent)
-          }
-            R.id.btnsignup ->{
-                val intent=Intent(this@LogInAndSignUpActivity,SignUpActivity::class.java)
+        when (v?.id) {
+            R.id.btnlogin -> {
+                val intent = Intent(this@LogInAndSignUpActivity, LoginActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.btnsignup -> {
+                val intent = Intent(this@LogInAndSignUpActivity, SignUpActivity::class.java)
                 startActivity(intent)
             }
             R.id.btnsignwithgoogle -> {
                 val signInIntent = googleSignInClient.signInIntent
                 startActivityForResult(signInIntent, SIGNIN_REQ_CODE)
             }
+            R.id.tv_privacy -> {
+                val intent = Intent(this@LogInAndSignUpActivity, PrivacyPolicyActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.tv_terms -> {
+                val intent = Intent(this@LogInAndSignUpActivity, TermsActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.tv_contactUs -> {
+                val intent = Intent(Intent.ACTION_SEND)
+                intent.setType("text/html")
+                intent.putExtra(Intent.EXTRA_EMAIL, "mukesh@gmail.com")
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Splitwise for Android")
+                intent.putExtra(
+                    Intent.EXTRA_TEXT,
+                    "User ID:\n Email:\n Device: ${MANUFACTURER} ${DEVICEMODEL} \n Operating System: Android API ${OS}"
+                )
+
+                startActivity(intent)
+            }
         }
     }
+
     private fun initData() {
-        googleSignInOptions= GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        googleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
@@ -95,8 +132,9 @@ class LogInAndSignUpActivity : AppCompatActivity(),View.OnClickListener {
             }
 
     }
-    private fun UpdateUI(user : FirebaseUser?){
-        val intent=Intent(this@LogInAndSignUpActivity,Splitwise_HomeActivity::class.java)
+
+    private fun UpdateUI(user: FirebaseUser?) {
+        val intent = Intent(this@LogInAndSignUpActivity, ViewPagerIntroActivity::class.java)
         startActivity(intent)
     }
 }

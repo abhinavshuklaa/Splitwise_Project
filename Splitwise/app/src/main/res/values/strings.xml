@@ -28,5 +28,9 @@
     <string name="byusing_signup">By signing up, you accept the Splitwise Terms of Service</string>
     <string name="already_have_an_account">Already have an account? <font color='#01C6DB'>Login</font></string>
     <string name="with_you">With<font color='#949896'> you </font>and: </string>
-    <string name="your_phone_number">Your Phone Number</string>
+    <string name="privacy">Privacy</string>
+    <string name="terms">Terms</string>
+    <string name="privacyPolicy">Privacy Policy :: Spiltwise</string>
+    <string name="TermsofService">Terms of Service :: Spiltwise</string>
+
 </resources>
