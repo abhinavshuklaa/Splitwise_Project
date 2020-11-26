@@ -15,6 +15,7 @@
     <RelativeLayout
         android:id="@+id/rlToolbarAddExpense"
         android:layout_width="match_parent"
+        android:padding="10dp"
         android:layout_height="?android:attr/actionBarSize"
         android:background="@color/background_green">
 

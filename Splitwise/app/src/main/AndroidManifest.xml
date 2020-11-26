@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Splitwise">
-        <activity android:name=".ViewPagerIntroActivity"></activity>
+        <activity android:name=".room_database_files.PrivacyPolicyActivity"></activity>
+        <activity android:name=".PrivacyPolicyActivity" />
+        <activity android:name=".ViewPagerIntroActivity" />
         <activity android:name=".TermsActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -23,29 +25,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Splitwise_HomeActivity">
-
-        </activity>
+        <activity android:name=".Splitwise_HomeActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".TermaOfService"></activity>
+        <activity android:name=".TermaOfService" />
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".ContactsListActivity">
-
-
-        </activity>
-        <activity android:name=".AddIconActivity">
-
-        </activity>
+        <activity android:name=".ContactsListActivity" />
+        <activity android:name=".AddIconActivity" />
         <activity android:name=".LogInAndSignUpActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".room_database_files.Add_Friends_to_Database_Activity">
-
-        </activity>
-        <activity android:name=".ContactsListActivityJava">
-
-        </activity>
-
+        <activity android:name=".room_database_files.Add_Friends_to_Database_Activity" />
+        <activity android:name=".ContactsListActivityJava" />
     </application>
 
 </manifest>

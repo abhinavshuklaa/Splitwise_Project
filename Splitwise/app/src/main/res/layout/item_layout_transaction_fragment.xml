@@ -8,6 +8,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_margin="10dp"
+        android:layout_centerVertical="true"
         android:src="@drawable/ic_dollar"
         android:padding="5dp" />
 
