@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_margin="5dp"
+        android:layout_height="50dp"
+        android:id="@+id/ivExpenseImage"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvAdderName"
+        android:text="Abhinav"
+        android:layout_toRightOf="@id/ivExpenseImage"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tvAdderName"
+        android:text="Added 'Cab' with"
+        android:id="@+id/tvExpenseType"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvAddedTo"
+        android:text="Vaibhav"
+        android:layout_toRightOf="@id/tvExpenseType"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ivExpenseImage"
+        android:id="@+id/tvAmountWithExpenseType"
+        android:text="you owe 70.00"
+        android:layout_below="@id/tvAdderName"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ivExpenseImage"
+        android:id="@+id/tvDateOrTime"
+        android:text="14/05/2020"
+        android:layout_below="@id/tvAmountWithExpenseType"/>
+
+
+</RelativeLayout>

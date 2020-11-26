@@ -27,8 +27,8 @@
         android:text="@string/hello"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/sp_20"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textSize="@dimen/sp_20" />
 
 
     <TextView
@@ -36,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_below="@id/tv_hello"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="@dimen/dp_100"
         android:layout_marginEnd="@dimen/dp_100"

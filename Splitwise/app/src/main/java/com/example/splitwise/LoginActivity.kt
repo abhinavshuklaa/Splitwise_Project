@@ -67,6 +67,7 @@ class LoginActivity : AppCompatActivity(),View.OnClickListener {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
+
                     intent=Intent(this@LoginActivity,ViewPagerIntroActivity::class.java)
                     startActivity(intent)
                     Log.d("Lakshmi", "signInWithEmail:success")

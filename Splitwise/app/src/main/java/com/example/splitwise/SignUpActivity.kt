@@ -31,19 +31,21 @@ class SignUpActivity : AppCompatActivity(),View.OnClickListener {
         setContentView(R.layout.activity_sign_up)
         initbuttons()
     }
-    fun initbuttons(){
-        btnSave.setOnClickListener(this)
+
+    fun initbuttons() {
+        btnSaveUser.setOnClickListener(this)
         btnback.setOnClickListener(this)
         byusingsignup.setOnClickListener(this)
-        firebaseAuth= FirebaseAuth.getInstance()
+        firebaseAuth = FirebaseAuth.getInstance()
     }
+
     override fun onClick(v: View?) {
-        when(v?.id){
-            R.id.btnback ->{
-                val intent= Intent(this@SignUpActivity,LogInAndSignUpActivity::class.java)
+        when (v?.id) {
+            R.id.btnback -> {
+                val intent = Intent(this@SignUpActivity, LogInAndSignUpActivity::class.java)
                 startActivity(intent)
             }
-            R.id.btnSave ->{
+            R.id.btnSaveUser -> {
                 sugnUp()
             }
             R.id.btnsignup ->{
@@ -53,6 +55,7 @@ class SignUpActivity : AppCompatActivity(),View.OnClickListener {
 
         }
     }
+
     private fun sugnUp() {
         if (mail.text.toString().isEmpty()) {
             mail.error = "Please enter email"
@@ -73,37 +76,56 @@ class SignUpActivity : AppCompatActivity(),View.OnClickListener {
             etFullname.error="Plear Enter name"
             etFullname.requestFocus()
             return
-        } else {
-            register(etFullname.text.toString(),mail.text.toString(),pwd.text.toString())
+        }
+        if(etPhoneNo.text.toString().isEmpty()){
+            etPhoneNo.error="Plear Enter name"
+            etPhoneNo.requestFocus()
+            return
+        }
+        else {
+        register(etFullname.text.toString(), mail.text.toString(), pwd.text.toString(),etPhoneNo.text.toString())
         }
     }
-    private fun register(musername:String,mmail:String,mpwd:String) {
-        firebaseAuth.signInWithEmailAndPassword(mmail, mpwd)
+
+    private fun register(musername: String, mmail: String, mpwd: String,phoneNo:String) {
+        firebaseAuth.createUserWithEmailAndPassword(mmail, mpwd)
             .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
+                 if (task.isSuccessful) {
                     Log.d("Lakshmi", "signInWithEmail:success")
                     val user = firebaseAuth.currentUser
-                    val userId:String?=user?.uid
-                    databaseReference=FirebaseDatabase.getInstance().getReference("Users").child(userId!!)
-                    var hashmap:HashMap<String,String> = HashMap()
-                    hashmap.put("userId",userId!!)
-                    hashmap.put("email",mmail)
-                    hashmap.put("mpwd",mpwd)
-                    hashmap.put("musername",musername)
-                    hashmap.put("imageurl","default")
-                    databaseReference.setValue(hashmap).addOnCompleteListener(this){task ->
+                    val userId: String = user!!.uid
+                    databaseReference =
+                        FirebaseDatabase.getInstance().getReference("Users").child(userId)
+                     var friendsList = emptyList<Friends>()
+                    val data = Database(
+                        userId,
+                        email = mmail,
+                        phoneNo = phoneNo,
+                        name = musername
 
-                        if(task.isSuccessful){
-                            val intent= Intent(this@SignUpActivity,LoginActivity::class.java)
-                            startActivity(intent)
-                        } else{
-                            Toast.makeText(
-                                baseContext, "failed.",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
+                    )
+//                    databaseReference = FirebaseDatabase.getInstance().getReference("Users")
+////                    val key: String =databaseReference.key.toString()
+        try {
+
+            databaseReference.setValue(data)
+                .addOnCompleteListener(this) { task ->
+
+                    if (task.isSuccessful) {
+                        val intent = Intent(this@SignUpActivity, LoginActivity::class.java)
+                        startActivity(intent)
+                    } else {
+                        Toast.makeText(
+                            baseContext, "failed.",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
+                }
 
+
+        }catch (e:Exception){
+            println("debug : ${e.message}")
+        }
                 } else {
                     Log.w("Lakshmi", "signInWithEmail:failure", task.exception)
                     Toast.makeText(
@@ -113,9 +135,10 @@ class SignUpActivity : AppCompatActivity(),View.OnClickListener {
                     //updateUI(null)
                 }
 
-            }
+                }
 
+            }
     }
 
 
-}
+

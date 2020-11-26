@@ -4,9 +4,6 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,9 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Splitwise">
-        <activity android:name=".LogInAndSignUpActivity"></activity>
         <activity android:name=".ViewPagerIntroActivity"></activity>
-        <activity android:name=".PrivacyPolicyActivity"></activity>
         <activity android:name=".TermsActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -24,15 +19,19 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".Splitwise_HomeActivity" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+
+        <activity android:name=".Splitwise_HomeActivity" >
+
+        </activity>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".ResetPasswordActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".LogInAndSignUpActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".Choose_Contact_Activity"/>
+
     </application>
 
 </manifest>
