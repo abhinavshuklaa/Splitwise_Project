@@ -24,6 +24,7 @@ class LogInAndSignUpActivity : AppCompatActivity(), View.OnClickListener {
     private val SIGNIN_REQ_CODE = 101
     private val DEVICEMODEL = Build.MODEL
     private val MANUFACTURER = Build.MANUFACTURER
+    private val OS = Build.VERSION.SDK_INT
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,8 +68,8 @@ class LogInAndSignUpActivity : AppCompatActivity(), View.OnClickListener {
                 val intent = Intent(Intent.ACTION_SEND)
                 intent.setType("text/html")
                 intent.putExtra(Intent.EXTRA_EMAIL, "mukesh@gmail.com")
-                intent.putExtra(Intent.EXTRA_SUBJECT, "Splitwise for' Android")
-                intent.putExtra(Intent.EXTRA_TEXT, "mukesh@gmail.com ${MANUFACTURER} ${DEVICEMODEL}")
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Splitwise for Android")
+                intent.putExtra(Intent.EXTRA_TEXT, "User ID:\n Email:\n Device: ${MANUFACTURER} ${DEVICEMODEL} \n Operating System: Android API ${OS}")
 
                 startActivity(intent)
             }
@@ -122,7 +123,7 @@ class LogInAndSignUpActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun UpdateUI(user: FirebaseUser?) {
-        val intent = Intent(this@LogInAndSignUpActivity, Splitwise_HomeActivity::class.java)
+        val intent = Intent(this@LogInAndSignUpActivity, ViewPagerIntroActivity::class.java)
         startActivity(intent)
     }
 }
