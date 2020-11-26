@@ -1,12 +1,17 @@
 package com.example.splitwise
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Build
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
@@ -26,11 +31,14 @@ class LogInAndSignUpActivity : AppCompatActivity(), View.OnClickListener {
     private val MANUFACTURER = Build.MANUFACTURER
     private val OS = Build.VERSION.SDK_INT
     private lateinit var auth: FirebaseAuth
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in_and_sign_up)
         initbuttons()
         initData()
+
     }
 
     fun initbuttons() {
@@ -69,7 +77,10 @@ class LogInAndSignUpActivity : AppCompatActivity(), View.OnClickListener {
                 intent.setType("text/html")
                 intent.putExtra(Intent.EXTRA_EMAIL, "mukesh@gmail.com")
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Splitwise for Android")
-                intent.putExtra(Intent.EXTRA_TEXT, "User ID:\n Email:\n Device: ${MANUFACTURER} ${DEVICEMODEL} \n Operating System: Android API ${OS}")
+                intent.putExtra(
+                    Intent.EXTRA_TEXT,
+                    "User ID:\n Email:\n Device: ${MANUFACTURER} ${DEVICEMODEL} \n Operating System: Android API ${OS}"
+                )
 
                 startActivity(intent)
             }
