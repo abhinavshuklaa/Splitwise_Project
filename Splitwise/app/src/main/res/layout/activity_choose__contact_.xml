@@ -6,26 +6,77 @@
     android:orientation="vertical"
     tools:context=".room_database_files.Add_Friends_to_Database_Activity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/background_green">
+
+        <ImageView
+            android:id="@+id/ivrightttt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_left_arrow"
+            android:layout_centerVertical="true"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:text="ADD new Contact"
+            android:layout_toRightOf="@id/ivrightttt"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"/>
+
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="18sp"
+        android:layout_margin="5dp"/>
+
+
+
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:id="@+id/etEnterNameOfTheFriend"
-        android:hint="enter phone number"/>
+        android:hint="Enter Name "/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:textSize="18sp"
+        android:layout_margin="5dp"/>
 
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etEnteredPhoneNo"
-        android:hint="enter phone number"/>
-
-
+        android:layout_margin="5dp"
+        android:padding="4dp"
+        android:hint="Enter phone number"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnAddThisFriend"
+        android:padding="10dp"
+        android:layout_margin="10dp"
         android:layout_gravity="center_horizontal"
         android:text="add friend"/>
+
+
 </LinearLayout>

@@ -4,6 +4,7 @@ import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
+import com.example.splitwise.room_database_files.TransactionFragment
 
 class FragmentAdapter_Splitwise_HomeActivity(fm: FragmentManager, behavior: Int) :
 
@@ -24,7 +25,7 @@ class FragmentAdapter_Splitwise_HomeActivity(fm: FragmentManager, behavior: Int)
 
             }
             2->{
-                return Friends_Fragment.newInstance("This is friends Fragment","FriendsFragment")
+                return TransactionFragment.newInstance("This is Transaction Fragment","TransactionFragment")
 
             }
         }

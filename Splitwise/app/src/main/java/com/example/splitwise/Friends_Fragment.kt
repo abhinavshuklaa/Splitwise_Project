@@ -45,10 +45,11 @@ class Friends_Fragment : Fragment(),RecyclerClickListener {
         btnAddMOreFriends.setOnClickListener{
             val intent = Intent(context, Add_Friends_to_Database_Activity::class.java)
             startActivity(intent)
-            btnCircleIconToAdd.setOnClickListener{
-                val intent_1=Intent(context,AddIconActivity::class.java)
-                startActivity(intent_1)
-            }
+
+        }
+        btnCircleIconToAdd.setOnClickListener{
+            val intent_1=Intent(context,AddIconActivity::class.java)
+            startActivity(intent_1)
         }
         userListViewModel = getContext()?.let { UserListViewModelFactory(it).create(UserListViewModel::class.java) }!!
         userListViewModel.fetchDataFromDB().observe(this, {

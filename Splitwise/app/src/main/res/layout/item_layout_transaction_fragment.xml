@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <ImageView
+        android:id="@+id/ivTransactionTypeImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_dollar"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/tvTransactionFirstPersonYou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/ivTransactionTypeImage"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvAND"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  and  "
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/tvTransactionFirstPersonYou"/>
+
+
+    <TextView
+        android:id="@+id/tvSecondPersonTransactionFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_toRightOf="@+id/tvAND"
+        android:layout_centerVertical="true"/>
+
+
+
+    <TextView
+        android:id="@+id/tvAmountYouOweTransactionFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/orange_splitwise"
+        android:layout_below="@+id/tvAND"
+        android:layout_toEndOf="@+id/ivTransactionTypeImage"
+        android:layout_marginStart="10dp"/>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="2dp"
+    android:backgroundTint="@color/orange_splitwise"/>
+
+
+</RelativeLayout>
