@@ -54,7 +54,8 @@
 <View
     android:layout_width="match_parent"
     android:layout_height="2dp"
-    android:backgroundTint="@color/orange_splitwise"/>
+    android:layout_below="@+id/ivTransactionTypeImage"
+    android:backgroundTint="@android:color/darker_gray"/>
 
 
 </RelativeLayout>
