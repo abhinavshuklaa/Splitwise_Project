@@ -40,6 +40,7 @@
         android:textColor="@android:color/black"
         android:layout_marginRight="@dimen/dp_30"
         android:layout_marginLeft="@dimen/dp_30"
+        android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <LinearLayout

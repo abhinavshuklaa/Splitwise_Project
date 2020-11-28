@@ -1,5 +1,6 @@
 package com.example.splitwise
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -112,6 +113,8 @@ class AddIconActivity : AppCompatActivity(), View.OnClickListener, RecyclerClick
                     etDescriptionOfTransaction.text.toString(),
                     etAmountOfTransaction.text.toString()
                 )
+                val intent =Intent(this@AddIconActivity,Splitwise_HomeActivity::class.java)
+                startActivity(intent)
             }
         }
 

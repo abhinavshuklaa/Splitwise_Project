@@ -12,6 +12,7 @@
         android:id="@+id/cardViewTotalBalance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:elevation="8dp">
 
 
@@ -82,6 +83,7 @@
             android:padding="5dp"
             android:text="+ Add More Friends "
             android:textColor="@android:color/black"
+            android:layout_marginStart="2dp"
             android:textSize="16sp" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -89,7 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="2dp"
             android:layout_marginBottom="2dp"
             android:outlineAmbientShadowColor="@color/white"
             android:src="@drawable/ic_plus"

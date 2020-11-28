@@ -66,7 +66,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/etEnteredPhoneNo"
         android:layout_margin="5dp"
-        android:padding="4dp"
         android:hint="Enter phone number"/>
 
     <Button
