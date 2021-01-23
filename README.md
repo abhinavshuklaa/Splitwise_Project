@@ -14,14 +14,18 @@
 
 
 
-Made a replica of Android Application Splitwise
+* Made a replica of Android Application Splitwise
 
-Used Firebase and Room Database For Backend to store user data and contacts
+* It is a free tool for friends and roommates to track bill and other shared expenses,so that everyone gets paid back.
 
+   
+  *  Android Tools : Android Studio
+  *  Android Components : Activities and Intents
+  *  Additional Components : RecycyclerView, Fragments
+  *  Architecture : MVVM(Architectural Components : Livadata,View Model)
+  * Database : Roomdatase and firebase
+ 
 
-Tech Stacks used:
-
-Android Studio Firebase
 
 Team
 |Abhinav Shukla |Nagalaxmi palyam| Vaibhav Singh | Mukesh Kumar|
