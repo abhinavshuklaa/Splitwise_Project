@@ -8,9 +8,7 @@
 ![login(1)](https://user-images.githubusercontent.com/68853216/105610436-85d9e900-5dd5-11eb-8cef-9facf0aa4023.png)
 ![Addfriends](https://user-images.githubusercontent.com/68853216/105610462-aa35c580-5dd5-11eb-8c7d-89e27ba2e247.png)
 ![slider](https://user-images.githubusercontent.com/68853216/105610466-aefa7980-5dd5-11eb-9fdc-3d4619c1de26.png)
-![addnewfriend](https://user-images.githubusercontent.com/68853216/105610468-b28e0080-5dd5-11eb-9647-14da9b60ebda.png)
-![newexpenses](https://user-images.githubusercontent.com/68853216/105610475-bb7ed200-5dd5-11eb-9919-41a1d9b9915a.png)
-![last](https://user-images.githubusercontent.com/68853216/105610482-c3d70d00-5dd5-11eb-8a4f-2bd31cedb9b9.png)
+
 
 
 Made a replica of Android Application Splitwise
