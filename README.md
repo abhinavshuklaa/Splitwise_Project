@@ -5,7 +5,7 @@
 ![viewpager3](https://user-images.githubusercontent.com/68853216/105609870-24644b00-5dd2-11eb-92a1-22df0a593693.png)
 ![signinandlogin](https://user-images.githubusercontent.com/68853216/105610308-24b21580-5dd5-11eb-8732-5a8d4c822c37.png)
 ![signup](https://user-images.githubusercontent.com/68853216/105610330-41e6e400-5dd5-11eb-8592-d87824df168f.png)
-![login](https://user-images.githubusercontent.com/68853216/105610346-5a56fe80-5dd5-11eb-9b01-26230156bf6e.png)
+
 
 Made a replica of Android Application Splitwise
 
