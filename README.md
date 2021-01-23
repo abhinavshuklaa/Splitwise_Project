@@ -9,6 +9,8 @@
 ![Addfriends](https://user-images.githubusercontent.com/68853216/105610462-aa35c580-5dd5-11eb-8c7d-89e27ba2e247.png)
 ![slider](https://user-images.githubusercontent.com/68853216/105610466-aefa7980-5dd5-11eb-9fdc-3d4619c1de26.png)
 ![addnewfriend](https://user-images.githubusercontent.com/68853216/105610528-039df480-5dd6-11eb-8f31-44f772940f99.png)
+![newexpenses](https://user-images.githubusercontent.com/68853216/105610549-26300d80-5dd6-11eb-9d36-b95e74ae71a8.png)
+![last](https://user-images.githubusercontent.com/68853216/105610556-2d571b80-5dd6-11eb-92cd-1c53f172521e.png)
 
 
 
